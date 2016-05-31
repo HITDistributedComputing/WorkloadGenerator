@@ -9,12 +9,14 @@ public class Job {
 	private String inputDir;
 	//inputMap: used to store both the HDFS input file path and corresponding probability
 	private Map<String, Double> inputMap;
+	private Map<Long, String> inputSizePathMap;
 	
 	public Job(){
 		jobName = new String();
 		jobCmd = new String();
 		inputDir = new String();
 		inputMap = new HashMap<String, Double>();
+		inputSizePathMap = new HashMap<Long, String>();
 	}
 
 	public Job(String jobName, String jobCmd, String inputDir) {
@@ -23,6 +25,7 @@ public class Job {
 		this.jobCmd = jobCmd;
 		this.inputDir = inputDir;
 		this.inputMap = new HashMap<String, Double>();
+		inputSizePathMap = new HashMap<Long, String>();
 	}
 
 	public String getJobCmd() {
